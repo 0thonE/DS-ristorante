@@ -22,7 +22,8 @@ class Preparable(ABC): #Interfaz
 
     def preparar(self):
         for x in self.ingredientes:
-            x.usar(1)
+            if x.usar(1) == False:
+                return 'Error... No hay suficientes ingredientes'
         return 'Preparando {}...'.format(self.nombre)
 
     def __str__(self):
@@ -59,8 +60,10 @@ class Ingrediente:
         pass
 
     def usar(self, n):
+        if self.stock < n:
+            return False
         self.stock = self.stock - n
-        pass
+        return True
 
     def __str__(self):
         return '{} tiene un stock de {}'.format(self.nombre, self.stock)
@@ -70,7 +73,7 @@ class Ingrediente:
 salchicha = Ingrediente('Salchicha', 10)
 carne = Ingrediente('Carne', 10)
 lechuga = Ingrediente('Lechuga', 10)
-pan = Ingrediente('Pan', 10)
+pan = Ingrediente('Pan', 1)
 limon = Ingrediente('Limon', 10)
 agua = Ingrediente('Agua', 10)
 papas = Ingrediente('Papas', 10)
@@ -86,5 +89,8 @@ combo_hamburguesa = OpcionMenu([hamburguesa, limonada, papas_comp], 33.5)
 #Resultados
 print(combo_hamburguesa)
 print(hamburguesa)
+print(hamburguesa.preparar())
+print(hamburguesa.preparar())
+pan.surtir(5)
 print(hamburguesa.preparar())
 print(pan)
