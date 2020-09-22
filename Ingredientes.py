@@ -69,28 +69,28 @@ class Ingrediente:
         return '{} tiene un stock de {}'.format(self.nombre, self.stock)
 
 
-#Datos de prueba
-salchicha = Ingrediente('Salchicha', 10)
-carne = Ingrediente('Carne', 10)
-lechuga = Ingrediente('Lechuga', 10)
-pan = Ingrediente('Pan', 1)
-limon = Ingrediente('Limon', 10)
-agua = Ingrediente('Agua', 10)
-papas = Ingrediente('Papas', 10)
-azucar = Ingrediente('Azucar', 10)
+# #Datos de prueba
+# salchicha = Ingrediente('Salchicha', 10)
+# carne = Ingrediente('Carne', 10)
+# lechuga = Ingrediente('Lechuga', 10)
+# pan = Ingrediente('Pan', 1)
+# limon = Ingrediente('Limon', 10)
+# agua = Ingrediente('Agua', 10)
+# papas = Ingrediente('Papas', 10)
+# azucar = Ingrediente('Azucar', 10)
 
-hamburguesa = Platillo('Hamburguesa', [lechuga, carne, pan], 'Hamburguesa de carne')
-limonada = Bebida('Limonada', [agua, limon], 'Limonada natural')
-papas_comp = Complemento('Papas',[papas], 'Complemento de papas')
+# hamburguesa = Platillo('Hamburguesa', [lechuga, carne, pan], 'Hamburguesa de carne')
+# limonada = Bebida('Limonada', [agua, limon], 'Limonada natural')
+# papas_comp = Complemento('Papas',[papas], 'Complemento de papas')
 
-combo_hamburguesa = OpcionMenu([hamburguesa, limonada, papas_comp], 33.5)
+# combo_hamburguesa = OpcionMenu([hamburguesa, limonada, papas_comp], 33.5)
 
 
-#Resultados
-print(combo_hamburguesa)
-print(hamburguesa)
-print(hamburguesa.preparar())
-print(hamburguesa.preparar())
-pan.surtir(5)
-print(hamburguesa.preparar())
-print(pan)
+# #Resultados
+# print(combo_hamburguesa)
+# print(hamburguesa)
+# print(hamburguesa.preparar())
+# print(hamburguesa.preparar())
+# pan.surtir(5)
+# print(hamburguesa.preparar())
+# print(pan)
