@@ -21,9 +21,11 @@ class Preparable(ABC): #Interfaz
         pass
 
     def preparar(self):
+    # def preparar(self,egresar=None):
         for x in self.ingredientes:
             if x.usar(1) == False:
                 return 'Error... No hay suficientes ingredientes'
+        # timeout (egresar())
         return 'Preparando {}...'.format(self.nombre)
 
     def __str__(self):
