@@ -35,17 +35,17 @@ class Preparable(ABC): #Interfaz
 
 class Platillo(Preparable):
     def preparar(self):
-        return 'Platillo - {}...'.format(super.preparar())
+        return 'Platillo - {}...'.format(super().preparar())
 
 
 class Bebida(Preparable):
     def preparar(self):
-        return 'Bebida - {}...'.format(super.preparar())
+        return 'Bebida - {}...'.format(super().preparar())
 
 
 class Complemento(Preparable):
     def preparar(self):
-        return 'Complemento - {}...'.format(super.preparar())
+        return 'Complemento - {}...'.format(super().preparar())
 
 
 class Ingrediente:
